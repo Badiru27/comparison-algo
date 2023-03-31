@@ -1,0 +1,32 @@
+Action Description,Action name,Input 1, Input 2, Input 3
+Search for a book,search_book,title,author,null
+Get the book's ISBN, get_book_isbn, book_title, book_author
+Get the book's publisher,get_book_publisher,book_title, book_author
+Writes a text output to the user,echo,message
+
+Instruction: Search for the book "The Alchemist" by Paulo Coelho, retrieve its ISBN and publisher, and send a message to the user with the ISBN and publisher.
+
+Step 1:
+Thought: I need to search for the book "The Alchemist" by Paulo Coelho
+Action: search_book
+Action Input: "The Alchemist", "Paulo Coelho"
+Output: {"Output": [{"title": "The Alchemist", "author": "Paulo Coelho", "ISBN": "123456789", "publisher": "HarperCollins"}]}
+
+
+###
+
+
+Step 2:
+Thought: I need to get the book's ISBN
+Action: get_book_isbn
+Action Input: "123456789", "The Alchemist", "Paulo Coelho"
+
+Step 3:
+Thought: I need to get the book's publisher
+Action: get_book_publisher
+Action Input: "HarperCollins", "The Alchemist", "Paulo Coelho"
+
+Step 4:
+Thought: I need to echo "The book's ISBN is 123456789 and publisher is HarperCollins"
+Action: echo
+Action Input: "The book's ISBN is 123456789 and publisher is HarperCollins."
